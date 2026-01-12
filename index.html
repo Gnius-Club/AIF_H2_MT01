@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playbook: Sesión 1 - 2do Preparatoria</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Playbook-S2-TM1</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <h1><span class="book-icon">📋</span> <strong>Playbook: Sesión 1 - 2do Preparatoria</strong></h1>
+        <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 1 - 2do de Preparatoria</strong></h1>
         <div class="header-widgets">
             <div class="timer-container">
-                <span id="timer">⏱️ 00:00</span>
-                <button id="startStop">Start</button>
-                <button id="reset">Reset</button>
+                <span id="global-timer">⏱️ 40:00</span>
+                <button id="global-start-stop">Start</button>
+                <button id="global-reset">Reset</button>
             </div>
             <div class="theme-toggle">
                 <i class="fas fa-sun"></i>
@@ -28,7 +27,6 @@
             </div>
         </div>
     </header>
-
     <div class="main-container">
         <aside class="activity-list">
             <h2>Actividades</h2>
@@ -40,256 +38,401 @@
                 <li><a href="#activity-4">4</a></li>
                 <li><a href="#activity-5">5</a></li>
             </ul>
-
-            <div class="sidebar-info">
-                <p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
-                <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
-            </div>
         </aside>
-
         <main class="content">
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>
-
-            <button id="toggle-dialogues">Mostrar todos los diálogos</button>
-
+            <!-- ACTIVIDAD 0: DE UN VISTAZO -->
             <div class="activity-card" id="activity-0">
-                <h2><span class="book-icon">📝</span> De un Vistazo</h2>
-                <p class="overview-subtitle">Resumen rápido de objetivos, materiales y preparación para el facilitador.</p>
-                <div class="overview-table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th style="width: 50%;">Objetivos, Tácticas y Entregable</th>
-                                <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <strong>Objetivos de Aprendizaje:</strong>
-                                    <ul>
-                                        <li>Puedo descomponer un proceso repetitivo en sus componentes fundamentales: Disparador y Acciones.</li>
-                                        <li>Puedo identificar la lógica de automatización detrás de tareas cotidianas.</li>
-                                        <li>Objetivo general de la sesión: Analizar y descomponer tareas repetitivas en sus componentes lógicos (Disparador y Acciones) para evaluar su potencial de automatización con herramientas no-code.</li>
-                                    </ul>
-                                    <strong>Secuencia Didáctica:</strong>
-                                    <ul>
-                                        <li><strong>Actividad 1:</strong> Saludo Interactivo con IA (3 min)</li>
-                                        <li><strong>Actividad 2:</strong> “I Can Statement” + Desafío (5-7 min)</li>
-                                        <li><strong>Actividad 3:</strong> AI GYM (10-12 min)</li>
-                                        <li><strong>Actividad 4:</strong> Brain Spark (17-20 min)</li>
-                                        <li><strong>Actividad 5:</strong> GNIUS STORM (5 min)</li>
-                                    </ul>
-                                    <strong>Entregable Clave:</strong>
-                                    <ul>
-                                        <li>Un documento breve que descompone una tarea repetitiva (personal o académica) en su Disparador y sus Acciones lógicas.</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <strong>Materiales Específicos:</strong>
-                                    <ul>
-                                        <li>Proyector e internet.</li>
-                                        <li>Acceso a LLM (Xolo).</li>
-                                        <li>Plataforma Make.com (para referencia conceptual).</li>
-                                        <li>Editor de texto o documentos (ej. Google Docs, Word).</li>
-                                        <li>Presentación (12 diapositivas).</li>
-                                    </ul>
-                                    <strong>Preparación Previa para esta sesión:</strong>
-                                    <ol>
-                                        <li><strong>Verificar Criterios de Calidad:</strong>
-                                            <ul>
-                                                <li>Correcta identificación del Disparador (Trigger).</li>
-                                                <li>Claridad y secuencia lógica de las Acciones.</li>
-                                                <li>Pertinencia de la tarea elegida como repetitiva.</li>
-                                                <li>Mención del potencial de automatización.</li>
-                                            </ul>
-                                        </li>
-                                        <li><strong>Revisar Materiales:</strong> Asegurar que la numeración de diapositivas en el Playbook esté alineada con la presentación final.</li>
-                                    </ol>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <h2><span class="book-icon">📝</span> De un Vistazo: Comando Central</h2>
+                <p class="overview-subtitle">Todo lo que necesitas para preparar y ejecutar esta misión en minutos.</p>
+                
+                <div class="command-section">
+                    <h3>🎯 Objetivo de Aprendizaje</h3>
+                    <div class="objective-box">
+                        <p><strong>Los estudiantes podrán:</strong> usar Make y modelos de lenguaje para descomponer procesos en Trigger/Acciones y documentar flujos para comprender la lógica de automatización y la eficiencia con intención.</p>
+                    </div>
+                </div>
+                <div class="command-section xolo-prompt">
+                    <h3>🤖 Prompt de Referencia para XOLO (Solo para Maestro)</h3>
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <span class="prompt-label">⚠️ NOTA: XOLO ya conoce el tema de esta misión. Este prompt es SOLO de referencia en caso de emergencia técnica:</span>
+                            <button class="copy-btn" onclick="copyPrompt('main-prompt')">
+                                <i class="fas fa-copy"></i> Copiar
+                            </button>
+                        </div>
+                        <pre id="main-prompt">Ayúdame a analizar una tarea repetitiva de mi vida diaria o académica. (Describe aquí tu tarea). Explícame cuál sería su Disparador (qué la inicia) y cuáles serían las Acciones que la componen. ¿Cómo podría automatizarla usando herramientas como Make.com, sin necesidad de programar? ¿Cómo sé si realmente vale la pena automatizar esta tarea?</pre>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>⚡ Puntos Esenciales de la Misión</h3>
+                    <div class="essentials-grid">
+                        <div class="essential-card">
+                            <div class="essential-icon">🎓</div>
+                            <h4>Concepto Clave</h4>
+                            <p>Lógica de automatización: Es definir un evento inicial (disparador) que activa una serie de pasos automáticos (acciones) para completar una tarea sin intervención humana.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🔧</div>
+                            <h4>Habilidad Técnica</h4>
+                            <p>Usar plataformas digitales para mapear procesos mediante disparadores y acciones.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🧪</div>
+                            <h4>Experimentación</h4>
+                            <p>Probar con diferentes tareas (académicas vs. personales) para entender qué procesos son realmente aptos para automatizarse.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">💬</div>
+                            <h4>Interacción con XOLO</h4>
+                            <p>XOLO ya conoce a cada estudiante y el tema de hoy. Solo abren el chat y comienzan a aprender. Tú guías el timing y motivación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>📦 Checklist de Materiales</h3>
+                    <div class="materials-checklist">
+                        <label><input type="checkbox"> Proyector/pantalla + presentación (5 diapositivas)</label>
+                        <label><input type="checkbox"> Internet estable + Gnius Space con XOLO activo</label>
+                        <label><input type="checkbox"> Dispositivo con acceso a internet (1 por estudiante)</label>
+                        <label><input type="checkbox"> Acceso a Make (https://www.make.com/)</label><br><label><input type="checkbox"> Acceso a ChatGPT, Gemini o Claude</label>
+                        <label><input type="checkbox"> Cuaderno de notas o herramienta de diagramación</label>
+                        <label><input type="checkbox"> ⚠️ Esta misión usa lógica de automatización sin código (No-Code)</label>
+                        <label><input type="checkbox"> 📋 Para comenzar: Crea una cuenta gratuita en Make.com y explora el panel de escenarios.</label>
+                    </div>
+                    <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> Mantener la privacidad de tus datos, usar contraseñas seguras y navegar con responsabilidad en las plataformas sugeridas.</p>
+                </div>
+                <div class="command-section">
+                    <h3>🗓️ Secuencia de la Misión (40 min)</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">1</div>
+                            <div class="timeline-content">
+                                <strong>Intro a la Misión</strong>
+                                <span class="time-badge">2 min</span>
+                                <p>Bienvenida, I Can Statement y contexto de la misión.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-content">
+                                <strong>A.I. Gym</strong>
+                                <span class="time-badge">8 min</span>
+                                <p>Los estudiantes abren el chat con XOLO y aprenden sobre lógica de automatización (sin prompt específico).</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">3</div>
+                            <div class="timeline-content">
+                                <strong>Brain Spark</strong>
+                                <span class="time-badge">20 min</span>
+                                <p>Idear, construir y experimentar un programa con XOLO.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">4</div>
+                            <div class="timeline-content">
+                                <strong>Gnius STORM - Compartir</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Demostración y reflexión en parejas.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">5</div>
+                            <div class="timeline-content">
+                                <strong>Entrega de Evidencias</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Subir capturas a Gnius Space y finalizar misión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>🚨 Resolución Rápida de Problemas</h3>
+                    <div class="troubleshooting-list">
+                        <ul>
+                            <li><strong>Si los alumnos no pueden ingresar a Gnius Space:</strong> Activa XOLO SOS en <a href="https://xolo.gnius.club" target="_blank">xolo.gnius.club</a> para continuar la misión sin interrumpir la clase.</li>
+                            <li><strong>Si Make.com no carga:</strong> Verificar la conexión a internet y recargar la página. Asegurarse de no tener bloqueadores de scripts activos.</li>
+<li><strong>Si el modelo de lenguaje (ChatGPT/Gemini/Claude) da respuestas vagas:</strong> Ser más específico en la descripción de la tarea que se quiere analizar.</li>
+<li><strong>Si hay errores en el flujo lógico:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que describan el paso que falla a XOLO.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 1: INTRO A LA MISIÓN -->
             <div class="activity-card" id="activity-1">
-                <h2>⚡ Actividad 1: Saludo Interactivo con IA ⏰ 3 minutos</h2>
-                <p>Activar a Xolo con perfil e intereses y conectar con el foco de la misión para que los alumnos se acostumbren a la secuencia de inicio.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Bienvenida y foco ⏰ 1 minuto</h3>
-                            <p>(Proyectar Diapositiva 2) Presenta el tema y su valor profesional.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Equipo, hoy exploraremos la <strong>lógica de la eficiencia</strong> a través de la <strong>automatización</strong>. Aprenderemos a descomponer cualquier proceso en sus elementos clave: <strong>Disparadores</strong> y <strong>Acciones</strong>, sentando las bases para construir soluciones sin código en plataformas como <strong>Make.com</strong>.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>🚀 Actividad 1: Intro a la Misión</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 2:00</span>
+                        <button class="timer-start-btn" data-duration="120">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Activación con Xolo ⏰ 2 minutos</h3>
-                            <p>Cada estudiante envía a Xolo: <strong>“Hola Xolo, soy [Nombre], perfil [X]; me interesa [Y]. Estoy en la misión de hoy.”</strong></p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Activen a <strong>Xolo</strong> con su perfil e intereses, y mencionen la misión de hoy: <strong>'Automatización y la Lógica de la Eficiencia'</strong>. Pídanle que les ayude a enfocar su atención en la identificación de <strong>Disparadores</strong> y <strong>Acciones</strong>.</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Dar la bienvenida con energía.</li>
+                            <li>Pedir a los alumnos que ingresen a Gnius Space.</li>
+                            <li>Proyecta diapositiva 1 con el I Can Statement.</li>
+                            <li>Motiva: "Hoy le daremos superpoderes de eficiencia a su tiempo.".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <ul>
+                            <li>XOLO ya está listo y conoce a cada estudiante.</li>
+                            <li>Sabe que hoy toca aprender sobre Lógica de Automatización.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Escucha la misión del día.</li>
+                            <li>Loguearse en Gnius Space.</li>
+                            <li>Preparación para trabajar en parejas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 1: I Can Statement</h4>
+                    <div class="slide-content">
+                        <p><strong>🎯 Hoy seré capaz de:</strong></p>
+                        <p class="highlight-text">🤖 A identificar disparadores y acciones para que tus tareas se resuelvan solas.</p>
+                        <p><strong>Aplicación real:</strong> Los ingenieros de software en empresas como Google usan esta tecnología para conectar aplicaciones y ahorrar tiempo en procesos administrativos.</p>
+                        <p><strong>Tu aliado:</strong> XOLO ya sabe qué vas a aprender hoy. ¡Solo abre el chat y comienza!</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 2: A.I. GYM -->
             <div class="activity-card" id="activity-2">
-                <h2>⚡ Actividad 2: “I Can Statement” + Desafío ⏰ 5-7 minutos</h2>
-                <p>Alinear expectativas y definir el reto práctico de la sesión.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Presenta el reto ⏰ 3 minutos</h3>
-                            <p>(Proyectar Diapositiva 3) Describe el reto y la meta observable.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">El reto de hoy es convertirse en <strong>'Analistas de Procesos'</strong>. Deberán elegir una <strong>tarea repetitiva</strong> de su vida diaria o académica y documentar su <strong>lógica de automatización</strong>. El éxito se medirá por la claridad en la identificación del <strong>Disparador</strong> y la <strong>secuencia de Acciones</strong>, así como por la pertinencia de la tarea elegida.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>🧠 Actividad 2: A.I. Gym</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 8:00</span>
+                        <button class="timer-start-btn" data-duration="480">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Escribe tu “I Can” ⏰ 3 minutos</h3>
-                            <p>(Proyectar Diapositiva 4) Cada estudiante redacta 1 “I Can” concreto alineado al entregable.</p>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 2.</li>
+                            <li>Indica: "Abran el chat con XOLO y salúdenlo. Él ya sabe qué les va a enseñar hoy."</li>
+                            <li>Circula para asegurar que todos interactúan con XOLO.</li>
+                            <li>Si alguien tiene dudas, recuérdale: "Pregúntale a XOLO, él te puede explicar de otra forma".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Reconoce al estudiante y sus preferencias de aprendizaje.</li>
+                            <li>Explica cómo identificar un disparador y una acción en cualquier proceso.</li>
+                            <li>Introduce el concepto de lógica de automatización y eficiencia con intención.</li>
+                            <li>Responde dudas sobre los conceptos.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Abrir el chat con XOLO y saludarlo.</li>
+                            <li>Aprender a identificar los componentes de un flujo de trabajo.</li>
+                            <li>Aprender sobre la importancia de automatizar solo lo que aporta valor.</li>
+                            <li>Despejar todas sus dudas preguntando a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 2: A.I. GYM</h4>
+                    <div class="slide-content">
+                        <p><strong>💬 Abre el chat con XOLO y salúdalo:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"¡Hola XOLO! Estoy listo para aprender."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Ahora, formulen su <strong>'I Can Statement'</strong>. Por ejemplo: 'Puedo <strong>descomponer</strong> la tarea de [tarea] en su <strong>Disparador</strong> y sus <strong>Acciones lógicas</strong> para entender su <strong>potencial de automatización</strong>'.</p>
-                            </div>
-                        </div>
+                        <p class="highlight-text" style="margin-top: 1rem;">✨ XOLO ya sabe quién eres y qué tema toca hoy. ¡Solo empieza a conversar!</p>
+                        <p class="highlight-text">🎯 Objetivo: Aprender a usar la lógica de procesos para identificar disparadores y acciones.</p>
+                    </div>
+                </div>
+                
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Hola a todos! Hoy vamos a descubrir cómo hacer que la tecnología trabaje para nosotros. Imaginen que sus tareas repetitivas pudieran hacerse solas. Para entender cómo lograrlo, vamos a entrar a Gnius Space y abrir el chat con XOLO. Saludénlo y cuéntenle que están listos. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy sobre la lógica de automatización. No necesitan escribir un prompt especial, solo empiecen a platicar con él. Pregúntenle todo lo que necesiten sobre disparadores y acciones. ¡XOLO es su guía experto en este viaje!</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 3: BRAIN SPARK -->
             <div class="activity-card" id="activity-3">
-                <h2>⚡ Actividad 3: AI GYM ⏰ 10-12 minutos</h2>
-                <p>Formalizar el marco conceptual de Disparadores y Acciones antes de la producción.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Marco del día ⏰ 4 minutos</h3>
-                            <p>(Proyectar Diapositiva 5) Introduce el framework: Descomposición Lógica de Procesos (Disparadores y Acciones).</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">El marco central de hoy es la <strong>'Descomposición Lógica de Procesos'</strong> en <strong>Disparadores (Triggers)</strong> y <strong>Acciones</strong>. Un error común es intentar automatizar sin entender el flujo. Eviten la ambigüedad en las acciones y la falta de un disparador claro. Un <strong>proceso bien definido</strong> es la base de una <strong>automatización eficiente</strong>.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>💡 Actividad 3: Brain Spark</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 20:00</span>
+                        <button class="timer-start-btn" data-duration="1200">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Mini-demostración ⏰ 5 minutos</h3>
-                            <p>(Proyectar Diapositiva 6) Modela en vivo cómo pedirle a Xolo que guíe el análisis de una tarea para automatizarla.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Voy a usar a <strong>Xolo</strong> para que nos guíe en este análisis. Observen cómo le pido ayuda con este prompt, que ustedes pueden adaptar para sus propias tareas: <strong>“Xolo, ayúdame a analizar una tarea repetitiva de mi vida diaria o académica. (Describe aquí tu tarea). Explícame cuál sería su Disparador (qué la inicia) y cuáles serían las Acciones que la componen. ¿Cómo podría automatizarla usando herramientas como Make.com, sin necesidad de programar? ¿Cómo sé si realmente vale la pena automatizar esta tarea?”</strong></p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta la diapositiva 3.</li>
+                            <li>Indica: "Pidan a XOLO que los ayude a idear un proyecto. Cuando tengan su GCS, pásenlo a bloques en MakeCode, prueben en el simulador y luego con el hardware real".</li>
+                            <li>Entrega por parejas los dispositivos conforme los alumnos prueben su GCS en el simulador.</li>
+                            <li>Si hay errores, recuerda: "Pregúntenle a XOLO, él los ayuda a depurar".</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 3: Check rápido ⏰ 2 minutos</h3>
-                            <p>(Proyectar Diapositiva 7) Verifica comprensión con 2 preguntas breves.</p>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Ayuda a desarrollar un plano de automatización con Trigger y Acciones.</li>
+                            <li>Entrega el GCS de la idea del genio.</li>
+                            <li>Resuelve errores de sintaxis o lógica.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Trabajar con XOLO un plano de automatización para una tarea específica.</li>
+                            <li>Traducir el GCS de XOLO a bloques en MakeCode.</li>
+                            <li>Depurar su programa con XOLO si hay errores.</li>
+                            <li>Validar la lógica de su flujo y probar.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 3: Brain Spark</h4>
+                    <div class="slide-content">
+                        <p><strong>1. 💬 Pide a XOLO que te ayude a crear:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"Ayúdame a actuar como Analista de Procesos: elige conmigo una tarea repetitiva y conviértela en un “plano de automatización” con: Trigger + Acciones (en orden lógico). Luego, guíame a proponer 2 versiones: una automatización mínima viable (pocos pasos) y una versión mejorada (más completa). Ejecuta: entrega el documento final con el plano y una mini-evaluación de “sí/no conviene automatizar” con razones."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Pregunta 1: ¿Qué es lo primero que debe ocurrir para que un <strong>proceso automatizado</strong> se inicie? (Respuesta: El <strong>Disparador</strong>). Pregunta 2: ¿Qué tipo de pasos son las <strong>'Acciones'</strong> en un proceso automatizado? (Respuesta: Pasos concretos y secuenciales).</p>
-                            </div>
-                        </div>
+                        <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tu programa:</strong></p>
+                        <ul>
+                            <li>¿El disparador que elegiste es lo suficientemente específico para iniciar el proceso?</li>
+                            <li>¿Qué pasaría si una de las acciones intermedias falla o no recibe los datos correctos?</li>
+                            <li>¿Funciona igual tu flujo si lo activas manualmente vs. si se activa por un evento externo?</li>
+                            <li>¿Cómo ayuda la lógica de automatización a reducir el error humano en esta tarea académica?</li>
+                            <li>Al decidir automatizar, ¿estás aplicando eficiencia con intención o solo automatizando por diversión?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Es hora de crear su primer plano de automatización! Ahora que entienden la lógica, van a trabajar con XOLO para elegir una tarea real, como organizar sus apuntes o gestionar correos, y convertirla en un plano detallado. XOLO los guiará para definir el Trigger y las Acciones en orden lógico. Incluso les ayudará a crear dos versiones: una sencilla y una pro. Por ejemplo, podrían idear cómo pasar automáticamente sus tareas de un correo a una lista de pendientes. Si tienen errores o dudas en la lógica, pregúntenle a XOLO, él los ayudará a depurar su flujo. Al final, evalúen si realmente vale la pena automatizarlo basándose en las preguntas de experimentación. ¡Manos a la obra!</p>
+                    </div>
+                </div>
+                <div class="challenge-prompt">
+                    <h4>🚀 Prompt de Desafío (para quienes terminen rápido)</h4>
+                    <div class="prompt-box">
+                        <p><strong>Si ya experimentaste con todo, pregunta a XOLO:</strong></p>
+                        <p class="challenge-text">"Ya probé con un flujo básico de Trigger y Acciones. ¿Puedes enseñarme cómo añadir una 'Condición' (Filtro) para que mi automatización solo ocurra si se cumple un requisito específico?"</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 4: GNIUS STORM - COMPARTIR -->
             <div class="activity-card" id="activity-4">
-                <h2>⚡ Actividad 4: Brain Spark ⏰ 17-20 minutos</h2>
-                <p>Producir el entregable tangible del Micro-Proyecto, usando a Xolo como guía.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Producción ⏰ 12 minutos</h3>
-                            <p>(Proyectar Diapositiva 8) Indica el producto específico y un checklist de calidad. Tiempo de trabajo autónomo.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Es hora de producir. Abran un documento y comiencen a descomponer la tarea que eligieron. Si tienen dudas, usen el prompt que modelamos para consultar con <strong>Xolo</strong>. Pídanle que actúe como un <strong>'experto en optimización de procesos'</strong> para que les ayude a refinar su lógica.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>⚡ Actividad 4: Gnius STORM - Compartir y Reflexionar</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Iteración ⏰ 5 minutos</h3>
-                            <p>(Proyectar Diapositiva 9) Pide una mejora concreta basada en criterios del marco.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Antes de finalizar, revisen su documento. Asegúrense de que cada <strong>acción</strong> sea lo suficientemente <strong>específica</strong> para ser ejecutada por una máquina. Si la tarea elegida tiene sub-tareas, ¿las han descompuesto adecuadamente?</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Organiza las parejas para compartir.</li>
+                            <li>Gestiona los tiempos: 2 min demo + 2 min reflexión + 1 min cierre.</li>
+                            <li>Facilita retroalimentación constructiva.</li>
+                            <li>Cierra con reflexión sobre aplicaciones reales.</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 3: Evidencia ⏰ 2 minutos</h3>
-                            <p>(Proyectar Diapositiva 10) Solicita la entrega del documento final.</p>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⏸️ XOLO EN ESPERA</p>
+                        <ul>
+                            <li>Disponible solo si hay dudas finales urgentes.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Demuestra su programa funcionando a otra pareja.</li>
+                            <li>Explica qué disparadores y acciones funcionan bien.</li>
+                            <li>Comparte un descubrimiento interesante.</li>
+                            <li>Da retroalimentación positiva al compañero.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 4: Think-Pair-Share</h4>
+                    <div class="slide-content tps-structure">
+                        <div class="tps-phase">
+                            <h4>🤔 THINK (30 seg)</h4>
+                            <p>Reflexión individual: ¿Qué disparadores y acciones funcionaron mejor en tu flujo? ¿Qué te sorprendió?</p>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Entreguen su documento de <strong>'Analista de Procesos'</strong>. Asegúrense de que incluya la tarea elegida, el <strong>Disparador</strong> y la lista de <strong>Acciones lógicas</strong>. Nombren el archivo: <strong>S01_AnalisisProceso_[SuNombre]</strong>.</p>
-                            </div>
+                        <div class="tps-phase">
+                            <h4>👥 PAIR (2 min)</h4>
+                            <p>Con otra pareja: Demuestren su programa y expliquen su experiencia</p>
+                            <p class="highlight-text">Frase guía: "Mi flujo automatiza tareas mediante disparadores y acciones. Me sorprendió que [descubrimiento]."</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>💬 SHARE (2 min)</h4>
+                            <p>Retroalimentación mutua y cierre del maestro.</p>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 5: ENTREGA DE EVIDENCIAS -->
             <div class="activity-card" id="activity-5">
-                <h2>⚡ Actividad 5: GNIUS STORM ⏰ 5 minutos</h2>
-                <p>Exhibir resultados y cerrar con una síntesis accionable.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Showcase relámpago ⏰ 3 minutos</h3>
-                            <p>(Proyectar Diapositiva 11) 2–3 presentaciones de 30–45 s, centradas en evidencia y criterio.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Enfoca tu presentación en la tarea que elegiste, cómo identificaste el <strong>Disparador</strong> y la <strong>acción</strong> más desafiante de descomponer.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>✅ Actividad 5: Entrega de Evidencias</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Cierre ejecutivo ⏰ 2 minutos</h3>
-                            <p>(Proyectar Diapositiva 12) Síntesis: 1 aprendizaje, 1 criterio de mayor impacto y 1 siguiente paso.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Síntesis: El aprendizaje clave es que la <strong>automatización</strong> comienza con una <strong>comprensión profunda del proceso</strong>. El criterio que más impactó fue la <strong>especificidad de las acciones</strong>. Como siguiente paso, piensen cómo podrían usar <strong>Make.com</strong> para automatizar una de las tareas que descompusieron hoy.</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 5 con las instrucciones.</li>
+                            <li>Guía a los estudiantes para tomar las capturas.</li>
+                            <li>Asegura que todos suban sus evidencias a Gnius Space.</li>
+                            <li>Felicita al grupo por completar la misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⭕ XOLO FINALIZADO</p>
+                        <ul>
+                            <li>La interacción con XOLO ha terminado para esta misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Tomar screenshot de su código en MakeCode.</li>
+                            <li>Tomar screenshot de su conversación con XOLO.</li>
+                            <li>Subir ambas evidencias a Gnius Space.</li>
+                            <li>Dar click en "Finalizar Misión".</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 5: ¡Misión Cumplida!</h4>
+                    <div class="slide-content">
+                        <p><strong>📸 Para terminar, sube tus evidencias a Gnius Space:</strong></p>
+                        <ol>
+                            <li>Una captura de pantalla de tu programa final en <strong>MakeCode</strong>.</li>
+                            <li>Una captura de pantalla de tu conversación con <strong>XOLO</strong> donde te dio tu GCS.</li>
+                        </ol>
+                        <p class="highlight-text" style="margin-top: 1rem;">¡No olvides dar click en el botón <strong>"Finalizar Misión"</strong> cuando termines!</p>
                     </div>
                 </div>
             </div>
@@ -297,4 +440,4 @@
     </div>
     <script src="script.js"></script>
 </body>
-</html>
+</html></html>
